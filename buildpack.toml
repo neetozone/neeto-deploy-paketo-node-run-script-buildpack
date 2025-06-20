@@ -2,7 +2,7 @@ api = "0.7"
 
 [buildpack]
   homepage = "https://github.com/paketo-buildpacks/node-run-script"
-  id = "paketo-buildpacks/node-run-script"
+  id = "neeto-deploy/node-run-script"
   name = "Paketo Buildpack for Node Run Script"
 
   [[buildpack.licenses]]
