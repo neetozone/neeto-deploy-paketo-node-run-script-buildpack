@@ -2,10 +2,11 @@
 
 ## `docker.io/paketobuildpacks/node-run-script`
 
-The Node Run Script CNB runs any arbitrary scripts desired for the given application. The scripts
-run are determined by the environment variable `BP_NODE_RUN_SCRIPTS` and run scripts specified in
-the contents of `package.json`. For example, given a `package.json` and `BP_NODE_RUN_SCRIPTS` var
-with the following content:
+The Node Run Script CNB runs any arbitrary scripts desired for the given
+application. The scripts run are determined by the environment variable
+`BP_NODE_RUN_SCRIPTS` and run scripts specified in the contents of
+`package.json`. For example, given a `package.json` and `BP_NODE_RUN_SCRIPTS`
+var with the following content:
 
 ```json
 {
@@ -19,11 +20,14 @@ with the following content:
 
 `BP_NODE_RUN_SCRIPTS="build,another-script"`
 
-The scripts `build` and `another-script` will be run through `npm run-script` or `yarn run`.
+The scripts `build` and `another-script` will be run through `npm run-script` or
+`yarn run`.
 
 ## Integration
 
-This CNB currently does not provide anything specific and is purposed primarily to run scripts in node framework apps, so there's no scenario we can imagine where you would need to require it as a dependency.
+This CNB currently does not provide anything specific and is purposed primarily
+to run scripts in node framework apps, so there's no scenario we can imagine
+where you would need to require it as a dependency.
 
 ## Usage
 
@@ -52,9 +56,12 @@ This could be useful if your app is a part of a monorepo.
 
 ## Specifying the scripts to be run
 
-To specify which scripts inside `package.json` you would like to run, please use the
-`BP_NODE_RUN_SCRIPTS` environment variable at build time either directly or through a
-[`project.toml` file](https://github.com/buildpacks/spec/blob/main/extensions/project-descriptor.md). The value of the variable should be a comma separated list of events listed in the app's `package.json`
+To specify which scripts inside `package.json` you would like to run, please use
+the `BP_NODE_RUN_SCRIPTS` environment variable at build time either directly or
+through a [`project.toml`
+file](https://github.com/buildpacks/spec/blob/main/extensions/project-descriptor.md).
+The value of the variable should be a comma separated list of events listed in
+the app's `package.json`
 
 ## Run Tests
 
